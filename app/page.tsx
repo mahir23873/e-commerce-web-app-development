@@ -35,7 +35,7 @@ export default function Page() {
         <div className="product-visual-wrap"><ProductArtwork /><div className="visual-index"><span>01</span><span className="index-line" /><span>DESIGNED TO DISAPPEAR</span></div></div>
         <div className="product-info">
           <div className="eyebrow"><span className="eyebrow-line" /> NEW RELEASE <span className="eyebrow-line" /></div>
-          <div className="product-heading"><div className="product-title-wrap"><h1>Sound,<br /><em>redefined.</em></h1><span className="edition-mark">S–01<br />SERIES</span></div><p className="product-subtitle">Studio headphones for the way<br className="desktop-break" /> you actually listen.</p></div>
+          <div className="product-heading"><div className="product-title-wrap"><h1>Welcome to<br /><em>My Store</em></h1><span className="edition-mark">S–01<br />SERIES</span></div><p className="product-subtitle">Studio headphones for the way<br className="desktop-break" /> you actually listen.</p></div>
           <div className="product-meta"><div className="rating"><span className="stars">★★★★★</span><span>4.9</span><span className="rating-count">(128 reviews)</span></div><span className="availability"><span /> IN STOCK</span></div>
           <div className="price-line"><span className="price">$289</span><span className="price-note">Complimentary shipping</span></div>
           <div className="rule" />
