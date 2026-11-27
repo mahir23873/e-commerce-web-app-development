@@ -1,7 +1,7 @@
 'use client'
 
 import { useState } from 'react'
-import { ArrowDownRight, ArrowLeft, ArrowRight, Check, CreditCard, LockKeyhole, Minus, Plus, ShieldCheck, ShoppingBag, Sparkles } from 'lucide-react'
+import { ArrowDownRight, ArrowLeft, ArrowRight, Check, CreditCard, LockKeyhole, Minus, Plus, ShieldCheck, ShoppingBag, Star } from 'lucide-react'
 
 function ProductArtwork() {
   return (
@@ -36,13 +36,38 @@ export default function Page() {
         <div className="product-info">
           <div className="eyebrow"><span className="eyebrow-line" /> NEW RELEASE <span className="eyebrow-line" /></div>
           <div className="product-heading"><div className="product-title-wrap"><h1>Welcome to<br /><em>My Store</em></h1><span className="edition-mark">S–01<br />SERIES</span></div><p className="product-subtitle">Studio headphones for the way<br className="desktop-break" /> you actually listen.</p></div>
-          <div className="product-meta"><div className="rating"><span className="stars">★★★★★</span><span>4.9</span><span className="rating-count">(128 reviews)</span></div><span className="availability"><span /> IN STOCK</span></div>
+          <div className="product-meta"><div className="rating"><span className="stars" aria-hidden="true">{Array.from({ length: 5 }, (_, index) => <Star key={index} size={11} fill="currentColor" strokeWidth={0} />)}</span><span>4.9</span><span className="rating-count">(128 reviews)</span></div><span className="availability"><span /> IN STOCK</span></div>
           <div className="price-line"><span className="price">$289</span><span className="price-note">Complimentary shipping</span></div>
           <div className="rule" />
           <div className="spec-row"><span className="spec-label">FINISH</span><div className="finish-info"><span className="finish-swatch" /><span>Evergreen</span></div><span className="spec-label">QTY</span><div className="quantity-control"><button onClick={() => setQuantity(Math.max(1, quantity - 1))} aria-label="Decrease quantity"><Minus size={13} /></button><span>{quantity}</span><button onClick={() => setQuantity(Math.min(9, quantity + 1))} aria-label="Increase quantity"><Plus size={13} /></button></div></div>
           <button className="buy-button" onClick={() => { setCheckout(true); setComplete(false) }}>Buy now <ArrowRight size={17} /></button>
           <div className="secure-note"><ShieldCheck size={14} strokeWidth={1.6} /><span>Secure checkout</span><span className="secure-separator">·</span><span>30-day returns</span></div>
           <div className="feature-row"><div><span className="feature-number">01</span><span>40h battery</span></div><div><span className="feature-number">02</span><span>Adaptive ANC</span></div><div><span className="feature-number">03</span><span>Spatial audio</span></div></div>
+        </div>
+      </section>
+
+      <section className="testimonials" aria-labelledby="testimonials-title">
+        <div className="testimonials-heading">
+          <span className="eyebrow"><span className="eyebrow-line" /> THE LISTENERS AGREE</span>
+          <h2 id="testimonials-title">Good sound<br /><em>travels.</em></h2>
+          <p>Thoughtful design, heard in everyday life.</p>
+        </div>
+        <div className="testimonial-list">
+          <article className="testimonial-card">
+            <div className="testimonial-stars" role="img" aria-label="5 out of 5 stars">{Array.from({ length: 5 }, (_, index) => <Star key={index} size={12} fill="currentColor" strokeWidth={0} aria-hidden="true" />)}</div>
+            <blockquote>“The first headphones I reach for, whether I&apos;m at my desk or halfway across town.”</blockquote>
+            <p className="testimonial-author">Maya R. <span>· Everyday listener</span></p>
+          </article>
+          <article className="testimonial-card">
+            <div className="testimonial-stars" role="img" aria-label="5 out of 5 stars">{Array.from({ length: 5 }, (_, index) => <Star key={index} size={12} fill="currentColor" strokeWidth={0} aria-hidden="true" />)}</div>
+            <blockquote>“Beautifully considered. The sound is rich, and the fit disappears after a few minutes.”</blockquote>
+            <p className="testimonial-author">Daniel K. <span>· Music producer</span></p>
+          </article>
+          <article className="testimonial-card">
+            <div className="testimonial-stars" role="img" aria-label="5 out of 5 stars">{Array.from({ length: 5 }, (_, index) => <Star key={index} size={12} fill="currentColor" strokeWidth={0} aria-hidden="true" />)}</div>
+            <blockquote>“A quiet little upgrade to every part of my day. I love the Evergreen finish.”</blockquote>
+            <p className="testimonial-author">Leah T. <span>· Forma customer</span></p>
+          </article>
         </div>
       </section>
 
